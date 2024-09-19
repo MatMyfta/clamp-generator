@@ -1,0 +1,16 @@
+label {
+	font-weight: bold;
+}
+
+.code code {
+	display: block;
+	font-size: .8rem;
+}
+
+.copy-button {
+	max-width: 48px;
+}
+
+.copy-button img {
+	opacity: .6;
+}

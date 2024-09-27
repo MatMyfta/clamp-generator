@@ -10,8 +10,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="js/clampGenerator.js"></script>
-    <script src="js/index.js"></script>
   </head>
   <body>
     <div class="container my-4">
@@ -64,7 +62,7 @@
             <div class="container">
               <div class="row">
                 <div class="code border border-1 bg-light rounded p-2 col">
-                  <code class=""></code>
+                  <code id="calculate-clamp-output" class=""></code>
                 </div>
                 <button
                   id="copy-button"
@@ -73,6 +71,48 @@
                   <img src="./img/copy.png" width="16px" alt="" />
                 </button>
               </div>
+            </div>
+          </div>
+          <h1 class="text-center my-4">Reverse clamp</h1>
+          <div class="form-container mb-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <label class="form-label">Slope (rem)</label>
+                <input
+                type="number"
+                class="form-control"
+                name="slope-input"
+                id="slope-input"
+                value="0.0345"
+                />
+              </div>
+                <div class="col-lg-6">
+                  <label class="form-label">y Intercept (vw)</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="y-intercept-input"
+                    id="y-intercept-input"
+                    value="2.7586"
+                  />
+              </div>
+            </div>
+          </div>
+          <div class="output">
+            <div class="row">
+              <div class="col-lg-6">
+                <h4 class="mb-2">Output min (px)</h4>
+                <div class="code border border-1 bg-light rounded p-2">
+                  <code id="reverse-min-size-output" class=""></code>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                    <h4 class="mb-2">Output max (px)</h4>
+                    <div class="code border border-1 bg-light rounded p-2">
+                      <code id="reverse-max-size-output" class=""></code>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
@@ -93,5 +133,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>
